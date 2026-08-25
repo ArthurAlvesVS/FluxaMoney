@@ -1,129 +1,140 @@
-# Controle Financeiro Pessoal
+# FluxaMoney
 
-Um sistema completo para gerenciamento financeiro, onde você pode registrar suas receitas e despesas, acompanhar sua evolução ao longo do tempo e receber análises inteligentes sobre sua vida financeira.
+Aplicação web para organização, acompanhamento e análise de finanças pessoais.
 
----
+O FluxaMoney permite registrar receitas e despesas, acompanhar indicadores financeiros em dashboards, definir metas e visualizar projeções e análises sobre a evolução financeira do usuário.
 
-## Sobre o projeto
-
-Este projeto foi desenvolvido com o objetivo de ajudar pessoas a organizarem suas finanças de forma simples, visual e eficiente.
-
-A aplicação permite que o usuário tenha controle total sobre seu dinheiro, entendendo para onde ele está indo e como pode melhorar sua saúde financeira.
-
----
-
-## Principais funcionalidades
+## Funcionalidades
 
 * Cadastro de receitas e despesas
-* Filtro por mês, ano e busca por descrição
-* Dashboard com resumo financeiro
-* Gráficos automáticos (categorias e evolução mensal)
-* Diagnóstico financeiro automático
-* Comparação com mês anterior
-* Alertas financeiros inteligentes
-* Definição de meta mensal
-* Projeção de economia ao final do mês
-* Exportação de dados (CSV e Excel)
 * Sistema de login e autenticação
+* Filtros por mês, ano e descrição
+* Dashboard com indicadores financeiros
+* Gráficos de categorias e evolução mensal
+* Diagnóstico financeiro automático
+* Comparação com períodos anteriores
+* Alertas financeiros
+* Definição de metas mensais
+* Projeção de economia
+* Exportação de dados em CSV e Excel
 
----
-
-## Tecnologias utilizadas
+## Tecnologias
 
 * Python
 * Flask
-* HTML, CSS e JavaScript
-* Chart.js
-* SQLite
 * SQLAlchemy
+* SQLite
+* JavaScript
+* HTML e CSS
+* Chart.js
+* Git/GitHub
 
----
+## Arquitetura geral
 
-## Como rodar o projeto
-
-### 1. Clone o repositório
-
-```bash
-git clone https://github.com/ArthurAlvesVS/controle-financeiro.git
+```text
+Usuário
+   ↓
+Flask
+   ↓
+Autenticação e regras da aplicação
+   ↓
+SQLAlchemy
+   ↓
+SQLite
+   ↓
+Dashboard e visualizações
+   ↓
+Chart.js
 ```
 
-### 2. Crie o ambiente virtual
+## Principais recursos técnicos
+
+### Autenticação
+
+A aplicação possui sistema de login para controlar o acesso às informações financeiras de cada usuário.
+
+### Persistência de dados
+
+Os dados são armazenados em SQLite e manipulados utilizando SQLAlchemy.
+
+### Dashboard
+
+O sistema consolida os dados financeiros e apresenta indicadores, gráficos e comparações para facilitar o acompanhamento da evolução financeira.
+
+### Análises financeiras
+
+A aplicação calcula informações como:
+
+* Total de receitas
+* Total de despesas
+* Saldo
+* Gastos por categoria
+* Evolução mensal
+* Margem financeira
+* Metas e projeções
+
+## Como executar
+
+Clone o repositório:
+
+```bash
+git clone https://github.com/ArthurAlvesVS/FluxaMoney.git
+```
+
+Entre na pasta:
+
+```bash
+cd FluxaMoney
+```
+
+Crie o ambiente virtual:
 
 ```bash
 python -m venv venv
 ```
 
-### 3. Ative o ambiente virtual
-
-Windows:
+### Windows
 
 ```bash
 venv\Scripts\activate
 ```
 
-Mac/Linux:
+### macOS/Linux
 
 ```bash
 source venv/bin/activate
 ```
 
-### 4. Instale as dependências
+Instale as dependências:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 5. Rode o projeto
+Execute a aplicação:
 
 ```bash
 python app.py
 ```
 
-### 6. Acesse no navegador
+Acesse no navegador:
 
-```
+```text
 http://127.0.0.1:5000
 ```
 
----
+## Documentação
 
-## Para quem é este sistema?
+A pasta `/docs` contém documentação adicional sobre a estrutura e o funcionamento da aplicação.
 
-Este sistema é ideal para:
+## Objetivo do projeto
 
-* Pessoas que querem organizar suas finanças
-* Quem deseja entender melhor seus gastos
-* Quem quer começar a guardar dinheiro
-* Usuários iniciantes ou avançados
+O FluxaMoney foi desenvolvido como projeto prático para aplicar conceitos de desenvolvimento web, autenticação, persistência de dados, modelagem de banco de dados, análise de informações e construção de dashboards utilizando Python e Flask.
 
----
+## Status
 
-## Sobre o funcionamento
-
-O sistema calcula automaticamente:
-
-* Total de receitas
-* Total de despesas
-* Saldo final
-* Gastos por categoria
-* Evolução mensal
-
-Além disso, ele gera análises e alertas com base no comportamento financeiro do usuário.
-
----
-
-## Documentação detalhada
-
-A documentação completa do sistema está disponível na pasta `/docs`, onde cada parte da aplicação é explicada de forma simples e didática.
-
----
-
-## Status do projeto
-
-Em desenvolvimento — melhorias contínuas estão sendo implementadas.
-
----
+Em desenvolvimento.
 
 ## Autor
 
-Desenvolvido por Arthur Alves Vasconcelos da Silva
+Arthur Alves Vasconcelos da Silva
